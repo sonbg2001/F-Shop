@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - F-Shop</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Google Materrial - Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <section id="product" class="product">
+            <div class="product-container">
+                <div class="product-top">
+                    <div class="product-top-title">
+                        <h3 class="heading-page">
+                            <a href="index.html">Trang chủ</a> / <span>Sản phẩm</span>
+                        </h3>
+                    </div>
+                    <div class="product-top-sort-by">
+                        <div class="product-top-sort-by-title">
+                            <h3>Sắp xếp:</h3>
+                        </div>
+                        <div class="product-top-sort-by-select">
+                            <select name="sort-by" id="sort-by">
+                                <option value="">Mặc định</option>
+                                <option value="">Tên (A - Z)</option>
+                                <option value="">Tên (Z - A)</option>
+                                <option value="">Giá (Thấp &gt; Cao)</option>
+                                <option value="">Giá (Cao &gt; Thấp)</option>
+                                <option value="">Mới nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-body">
+                    <div class="product-body-filter">
+                        <div class="product-body-filter-title">
+                            <h3>Bộ lọc:</h3>
+                        </div>
+                        <div class="product-body-filter-select">
+                            <select name="filter" id="filter">
+                                <option value="">Tất cả</option>
+                                <option value="">Áo phông</option>
+                                <option value="">Quần</option>
+                                <option value="">Giày</option>
+                            </select>
+                        </div>
+                        <div class="product-body-filter-brand">
+                            <h3>Thương hiệu</h3>
+                            <div class="product-body-filter-brand-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="brand-1" name="brand-1" />
+                                        <label for="brand-1">Thương hiệu 1</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand-2" name="brand-2" />
+                                        <label for="brand-2">Thương hiệu 2</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand-3" name="brand-3" />
+                                        <label for="brand-3">Thương hiệu 3</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-price">
+                            <h3>Giá</h3>
+                            <div class="product-body-filter-price-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="price-1" name="price-1" />
+                                        <label for="price-1">0đ - 100.000đ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-2" name="price-2" />
+                                        <label for="price-2">100.000đ - 200.000đ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-3" name="price-3" />
+                                        <label for="price-3">200.000đ - 300.000đ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-4" name="price-4" />
+                                        <label for="price-4">300.000đ - 500.000đ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-5" name="price-5" />
+                                        <label for="price-5">500.000đ - 800.000đ</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-size">
+                            <h3>Kích thước</h3>
+                            <div class="product-body-filter-size-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="size-1" name="size-1" />
+                                        <label for="size-1">XS</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-2" name="size-2" />
+                                        <label for="size-2">S</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-3" name="size-3" />
+                                        <label for="size-3">M</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-4" name="size-4" />
+                                        <label for="size-4">L</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-5" name="size-5" />
+                                        <label for="size-5">XL</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="product-body-filter-button">
+                            <button type="submit" class="btn btn-cart">Lọc</button>
+                        </div>
+                    </div>
+                    <div id="product-body-list" class="home-featured-product-container-products">
+                        {{#each products}}      
+                            <a href="/detail?name={{this.name}}">                      
+                            <div  class="home-featured-product-container-products-product product-body-list-item">
+                                <div class="home-featured-product-container-products-product-image">
+                                    <img src="{{this.image}}" alt="">
+                                </div>
+                                <div class="home-featured-product-container-products-product-title product-body-list-item-title">
+                                    <h4 >{{this.name}}</h4>
+                                </div>
+                                <div class="home-featured-product-container-products-product-price-discount product-body-list-item-discount">
+                                    <p>Giảm {{this.discount}}%</p>
+                                </div>
+                                <div class="home-featured-product-container-products-product-price product-body-list-item-price">
+                                    <h4><span>{{this.price}}.000đ</span> {{this.price}}đ</h4>
+                                </div>
+                                <div class="home-featured-product-container-products-product-button">
+                                    <button class="btn btn-cart">Đặt mua</button>
+                                    <button class="btn btn-cart">Xem chi tiết</button>
+                                </div>
+                            </div>
+                            </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

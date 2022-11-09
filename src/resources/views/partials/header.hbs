@@ -1,0 +1,191 @@
+<div class="header-wrapper">
+    <div class="header-container header-top">
+        <div class="container header-top-content">
+            <div class="header-top-left">
+                <div class="header-top-left-content">
+                    <div class="header-top-left-content-item">
+                        <i class="fa fa-phone"></i>
+                        <span>+84 987 654 321</span>
+                    </div>
+                    <div class="header-top-left-content-item">
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <a href="mailto: fshop@gmail.com">
+                                <span>fshop@gmail.com</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-top-right">
+                <div class="header-top-right-content">
+                    <div class="header-top-right-content-item">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="header-top-right-content-item">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="header-top-right-content-item">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="header-top-right-content-item">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="header-top-right-content-item">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container header-main">
+        <div class="container header-main-content">
+            <div class="header-main-left">
+                <div class="header-logo">
+                    <a href="/">
+                        <h3>F-Shop</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="header-main-mid">
+                <div class="header-search">
+                    <form action="" method="get">
+                        <input type="text" name="search" placeholder="Search...">
+                        <button class="btn-submit" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-main-right">
+                <div class="header-user">
+                    <div class="header-user-image">
+                        <img src="/assets/images/user.jpg" height="40" alt="">                        
+                    </div>
+                    <div class="header-user-funtion">
+                        <div class="header-user-funtion-item">
+                            <a href="#account.html">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </div>
+                        <div class="header-user-funtion-item">
+                            <a href="#">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <span>Lịch sử mua hàng</span>
+                            </a>
+                        </div>
+                        <div class="header-user-funtion-item">
+                            <a href="login.html">
+                                <i class="fa-solid fa-sign-out-alt"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-cart">
+                    <div id="cart-mini">
+                        <span id="cart-count">Giỏ hàng(0)</span>
+                        <span id="cart-total">/ 0đ</span>
+                    </div>
+                    <button id="btn-cart" class="btn btn-login" onclick="cartPage()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button id="btn-wishlist" class="btn btn-login" onclick="wishlistPage()">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="header-menu">
+                    <button id="btn-menu" class="btn btn-login">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container header-bottom">
+        <div class="container header-bottom-content">
+            <div class="header-bottom-nav">
+                <ul class="header-bottom-nav-list">
+                    <li class="header-bottom-nav-list-item">
+                        <a href="brand.html">Thương hiệu</a>
+                    </li>
+                    <li class="header-bottom-nav-list-item">
+                        <a href="/">Trang chủ</a>
+                    </li>
+                    <li class="header-bottom-nav-list-item header-bottom-nav-list-item-product">
+                        <a href="/product">Sản phẩm</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <ul class="header-bottom-nav-list-sub">
+                            <li class="header-bottom-nav-list-sub-item">
+                                <a href="/product">Áo phông</a>
+                            </li>
+                            <li class="header-bottom-nav-list-sub-item">
+                                <a href="/product">Quần</a>
+                            </li>
+                            <li class="header-bottom-nav-list-sub-item">
+                                <a href="/product">Giày</a>
+                            </li>
+                        </ul> 
+                    </li>
+                    
+                    <li class="header-bottom-nav-list-item">
+                        <a href="/add">Thêm sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var prevScrollpos = 159;
+        var headerHeight = $('.header-wrapper').height();
+        console.log(headerHeight);
+        window.onscroll = function () {
+            var currentScrollPos = document.documentElement.scrollTop;
+            if (prevScrollpos > currentScrollPos) {
+                $(".header-wrapper").css("top", "0");
+            } else {
+                $(".header-wrapper").css("top", "-39px");
+                $(".header-wrapper").css(
+                    "transition",
+                    "all 0.5s ease-in-out"
+                );
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        $("#btn-menu").click(function () {
+            $(".header-bottom").fadeToggle("slow");
+        });
+
+        
+    });
+    // cart local storage
+    var storageKey = "cart";
+    function cartHeader() {
+        var cart = localStorage.getItem(storageKey);
+        if (cart) {
+            cart = JSON.parse(cart);
+            var cartTotal = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                    var totalItem = item.price - item.price * item.discount / 100;
+                    totalItem = totalItem * item.quantity;
+                    cartTotal += totalItem;
+            }
+            $("#cart-count").text("Giỏ hàng(" + cart.length + ")");
+            $("#cart-total").text("/ " + cartTotal.toFixed(3) + "đ");
+        }
+        $("#cart-mini").show();
+        $("#cart-mini").css("display", "flex");
+        $("#cart-mini").css("opacity", "1");
+        $("#cart-mini").css("transition", "all 0.5s ease-in-out");
+    }
+    cartHeader();
+</script>

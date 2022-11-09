@@ -1,0 +1,162 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - F-Shop</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Google Materrial - Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <section id="home" class="home">
+            <div class="home-container">
+                <div class="home-slider swiper">
+                    <div class="home-slider-wrapper swiper-wrapper">
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-03.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-05.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-06.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-07.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-08.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-09.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="home-slider-wrapper-slide swiper-slide">
+                            <div class="home-slider-wrapper-slide-image">
+                                <img src="assets/images/slide-10.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    {{!-- <div class="swiper-pagination"></div> --}}
+
+                    <!-- If we need navigation buttons -->
+                    {{!-- <div class="swiper-button-prev"></div> --}}
+                    {{!-- <div class="swiper-button-next"></div> --}}
+                </div>
+            </div>
+            <div class="home-featured-product">
+                <div class="home-featured-product-container">
+                    <div class="home-featured-product-container-title">
+                        <h2 class="heading">Sản phẩm nổi bật</h2>
+                    </div>
+                    {{!-- <div id="product-body-list" class="home-featured-product-container-products">
+                    </div> --}}
+                    <div id="product-body-list" class="home-featured-product-container-products">
+                        {{#each products}}      
+                            <a href="/detail?name={{this.name}}">                      
+                            <div  class="home-featured-product-container-products-product product-body-list-item">
+                                <div class="home-featured-product-container-products-product-image">
+                                    <img src="{{this.image}}" alt="">
+                                </div>
+                                <div class="home-featured-product-container-products-product-title product-body-list-item-title">
+                                    <h4 >{{this.name}}</h4>
+                                </div>
+                                <div class="home-featured-product-container-products-product-price-discount product-body-list-item-discount">
+                                    <p>Giảm {{this.discount}}%</p>
+                                </div>
+                                <div class="home-featured-product-container-products-product-price product-body-list-item-price">
+                                    <h4><span>{{this.price}}.000đ</span> {{this.price}}đ</h4>
+                                </div>
+                                <div class="home-featured-product-container-products-product-button">
+                                    <button class="btn btn-cart">Đặt mua</button>
+                                    <button class="btn btn-cart">Xem chi tiết</button>
+                                </div>
+                            </div>
+                            </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-lastest-product-image">
+                <div class="home-lastest-product-image-title">
+                    <h2 class="heading">Sản phẩm mới nhất</h2>
+                </div>
+                <div class="home-lastest-product-image-list">
+                    <img src="assets/images/dahon-sample-1.jpg.webp" alt="">
+                    <img src="assets/images/dahon-sample-3.jpg.jpeg" alt="">
+                    <img src="assets/images/dahon-sample-2.jpg.webp" alt="">
+                    <img src="assets/images/dahon-sample-4.jpg.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+
+    <!-- Slider -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>>

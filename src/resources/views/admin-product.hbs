@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Manage - F-Shop</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Google Materrial - Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/adminstyle.css">
+
+</head>
+
+<body>
+    {{!-- <div id="wrapper">
+        <div id="header" class="header"></div>
+        <section id="product" class="product">
+            <div class="product-container">
+                <div class="product-add">
+                    <div class="product-add-container">
+                        <div class="product-add-title">
+                            <h1>Add Product</h1>
+                            <button class="btn btn-danger" onclick="closeForm()">Close</button>
+                        </div>
+                        <div class="product-add-form">
+                            <div class="product-add-form-container">
+                                <div class="product-add-form-title">
+                                    <h2>Product Information</h2>
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-id">Product ID</label>
+                                    <input type="text" id="product-id" name="product-id" placeholder="Product ID" readonly>
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-name">Product Name</label>
+                                    <input type="text" name="product-name" id="product-name"
+                                        placeholder="Enter Product Name">
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-price">Product Price</label>
+                                    <input type="text" name="product-price" id="product-price"
+                                        placeholder="Enter Product Price">
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-discount">Product Discount</label>
+                                    <input type="text" name="product-discount" id="product-discount"
+                                        placeholder="Enter Product Discount">
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-type">Product Type</label>
+                                    <select name="product-type" id="product-type">
+                                        <option value="">Select Product Type</option>
+                                        <option value="shirt">Áo</option>
+                                        <option value="trousers">Quần</option>
+                                        <option value="shoes">Giày</option>
+                                    </select>
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-description">Product Description</label>
+                                    <textarea name="product-description" id="product-description"
+                                        placeholder="Enter Product Description"></textarea>
+                                </div>
+                                <div class="product-add-form-input">
+                                    <label for="product-image">Product Image</label>
+                                    <img src="" style="height:60px" alt="product-image-preview" id="product-image-preview">
+                                    <input type="file" name="product-image" id="product-image" onChange="img_pathUrl(this)">
+                                </div>
+                            </div>
+                            <div class="product-add-form-button">
+                                <button class="btn btn-primary" name="add-product" id="add-product" onclick="addItem()">Add
+                                    Product</button>
+                                <button class="btn btn-green" onclick="updateItem()">Update Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-header">
+                    <h1 class="heading">Product</h1>
+                    <button class="btn btn-primary" onclick="openForm()">Add Product</button>
+                </div>
+                <div class="product-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Image</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-body-list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <div id="footer" class="footer"></div>
+    </div> --}}
+    <form style="display: block;">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    <!-- jquery -->
+    {{!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script> --}}
+        
+</body>
+
+</html>
